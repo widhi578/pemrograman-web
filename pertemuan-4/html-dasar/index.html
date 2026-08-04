@@ -7,20 +7,44 @@
 </head>
 
 <style>
-    .header {
+    .header1 {
         text-align: center;
         margin-top: 50px;
     }
+
     .foto {
-        margin-top: 100px;
+        margin-top: 50px;
         display: flex;
         justify-content: center;
         gap: 20px;
     }
+
+    /* .list, .list1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    } */
+
+    .table {
+        margin-top: 50px;
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #e0fdff;
+    }
 </style>
 
 <body>
-    <div class="header">
+    <div class="header1">
         <h1>Foto Kegiatan</h1>
     </div>
 
@@ -30,5 +54,80 @@
         <img src="assets/widzz3.jpeg" alt="widzz3" width="300px" height="200px">
     </div>
 
+    <hr>
+
+    <div class="header2">
+        <h1>Makanan Kesukaan</h1>
+    </div>
+
+    <div class="list">
+        <ul>
+            <li>Cordon Blue</li>
+            <li>Sate Ayam</li>
+            <li>Nasi Goreng</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="header3">
+        <h1>Algoritma Belanja Online</h1>
+    </div>
+
+    <div class="list1">
+        <ol>
+            <li>Buka aplikasi belanja online</li>
+            <li>Pilih produk yang diinginkan</li>
+            <li>Masukkan ke keranjang belanja</li>
+            <li>Lakukan pembayaran</li>
+            <li>Tunggu produk sampai di rumah</li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <div class="header4">
+        <h1>Mata Pelajaran</h1>
+    </div>
+
+    <div class="table">
+        <table>
+            <tr>
+                <th>Senin</th>
+                <th>Selasa</th>
+                <th>Rabu</th>
+                <th>Kamis</th>
+                <th>Jumat</th>
+            </tr>
+            <tr>
+                <td>PJOK</td>
+                <td>Konsentrasi Keahlian</td>
+                <td>Bahasa Jepang</td>
+                <td>Mapel Pilihan</td>
+                <td>Pendidikan Agama Islam</td>
+            </tr>
+            <tr>
+                <td>Konsentrasi Keahlian</td>
+                <td>Kewirausahaan</td>
+                <td>Bahasa Inggris</td>
+                <td>Konsentrasi Keahlian</td>
+                <td>Bahasa Jepang</td>
+            </tr>
+            <tr>
+                <td>Kewirausahaan</td>
+                <td>Bahasa Inggris</td>
+                <td>Bahasa Indonesia</td>
+                <td>Pendidikan Pancasila</td>
+                <td>BK</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>Matematika</td>
+                <td>-</td>
+                <td>Konsentrasi Keahlian</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
