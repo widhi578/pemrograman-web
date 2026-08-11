@@ -7,66 +7,121 @@
 </head>
 
 <style>
-    * {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
+  * { 
+    box-sizing: border-box;
+  }
+  body { 
+    margin: 0; 
+    min-height: 100vh; 
+    font-family: Arial, Helvetica, sans-serif; 
+    color: #1e293b; 
+    background: #f1f5f9; 
+  }
+  header {
+  padding: 42px 24px;
   text-align: center;
-  font-size: 35px;
   color: white;
+  background: linear-gradient(120deg, #34487C, #3E5DB7);
 }
 
-/* Create two columns/boxes that floats next to each other */
+header h2 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+section {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 0 24px;
+}
+
+nav, article {
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
 nav {
-  float: left;
-  width: 30%;
-  height: 300px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
+  padding: 18px;
+  background: #1D263E;
 }
 
-/* Style the list inside the menu */
 nav ul {
-  list-style-type: none;
+  margin: 0;
   padding: 0;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  padding: 12px 14px;
+  color: #cbd5e1;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  color: white;
+  background: #1e40af;
 }
 
 article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #f1f1f1;
-  height: 300px; /* only for demonstration, should be removed */
+  min-height: 320px;
+  padding: 32px;
+  background: white;
 }
 
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
+article h1 {
+  margin: 0 0 14px;
+  color: #0f172a;
+  font-size: 2rem;
 }
 
-/* Style the footer */
+article p {
+  max-width: 680px;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #2563eb;
+}
+
 footer {
-  background-color: #777;
-  padding: 10px;
+  padding: 18px 24px;
   text-align: center;
-  color: white;
+  color: #cbd5e1;
+  background: #1D263E;
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  section {
+    grid-template-columns: 1fr;
+    margin: 20px auto;
+    padding: 0 16px;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  
+  nav a {
+    padding: 9px 11px;
+  }
+  
+  article {
+    min-height: 0;
+    padding: 24px;
   }
 }
 </style>
@@ -88,14 +143,17 @@ footer {
   
         <article>
             <h1>Bio Data</h1>
-            <p>Nama   : Ahmad Widhi Praditya</p>
-            <p>Umur   : 17 tahun</p>
-            <p>Alamat : Jl. Cipinang Latihan</p>
+            <p>Halo nama saya <span class="highlight">Ahmad Widhi Praditya</span>. Usia saya 17 tahun.
+               Saya lahir di Jakarta pada tanggal 1 Desember 2009. Saat ini saya tinggal di Jl. Cipinang Latihan, Jakarta Timur.
+            </p>
+            <!-- <p>Tempat, Tgl Lahir : Jakarta, 1 Desember 2009</p>
+            <p>Umur              : 17 tahun</p>
+            <p>Alamat            : Jl. Cipinang Latihan</p> -->
         </article>
     </section>
 
     <footer>
-        <p>Footer</p>
+        <p>&copy; Ahmad Widhi Praditya</p>
     </footer>
 </body>
 </html>
