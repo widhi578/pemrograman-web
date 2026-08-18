@@ -1,0 +1,151 @@
+/* HEADER */
+.header h1 {
+  color: #e85d04;
+}
+.header nav a {
+  color: #2a9d8f;
+}
+
+/* ================ */
+
+/* SECTION 1 */
+.section-1-p {
+  color: #e76f51;
+}
+.section-1 h2 {
+  color: #006d77;
+}
+.section-1 p a {
+  color: #d62828;
+}
+
+/* ================ */
+
+/* SECTION 2 */
+.section-2 h2 {
+  color: #5a189a;
+}
+.section-2 h3 {
+  color: #0077b6;
+}
+
+/* ================ */
+
+/* SECTION 3 */
+.section-3 h2 {
+  color: #5a189a;
+}
+/* ARTIKEL */
+.artikel-1 h3 {
+  color: #0077b6;
+}
+.artikel-1 a {
+    color: #c1121f;
+}
+.artikel-2 h3 {
+  color: #9c6644;
+}
+.artikel-2 a {
+    color: #c1121f;
+}
+.artikel-3 h3 {
+  color: #7209b7;
+}
+.artikel-3 a {
+    color: #c1121f;
+}
+
+/* ================ */
+
+/* SECTION 4 */
+.section-4 h2 {
+  color: #5a189a;
+}
+.section-4 table caption{
+    color: #6a040f;
+}
+.section-4 table thead{
+    color: #005f73;
+}
+/* BARIS */
+.baris-1 {
+    color: #3a5a40;
+}
+.baris-2 {
+    color: #7b2cbf;
+}
+.baris-3 {
+    color: #9a3412;
+}
+
+/* ================ */
+
+/* SECTION 5 */
+.section-5 h2 {
+  color: #5a189a;
+}
+/* LIST */
+.li-1 {
+    color: #0077b6;
+}
+.li-2 {
+    color: #e85d04;
+}
+.li-3 {
+    color: #6a4c93;
+}
+.li-4 {
+    color: #2a9d8f;
+}
+
+/* ================ */
+
+/* SECTION 6 */
+.section-6 h2 {
+  color: #5a189a;
+}
+.section-6 blockquote p {
+  color: #6d597a;
+}
+.section-6 blockquote cite {
+  color: #bc4749;
+}
+
+/* ================ */
+
+/* SECTION 7 */
+.section-7 h2 {
+  color: #5a189a;
+}
+.section-7 details summary {
+  color: #3c096c;
+}
+.section-7 details p {
+  color: #606c38;
+}
+
+/* ================ */
+
+/* SECTION 8 */
+.section-8 h2 {
+  color: #5a189a;
+}
+.section-8 p {
+  color: #577590;
+}
+.section-8 form label {
+    color: #9d0208;
+}
+.section-8 form button {
+    color: #9d0208;
+}
+
+/* ================ */
+
+/* FOOTER */
+.footer h2 {
+  color: #f77f00;
+}
+.footer address {
+  color: #457b9d;
+}
