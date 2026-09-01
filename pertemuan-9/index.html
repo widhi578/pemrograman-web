@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Widhi — Portofolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- navbar -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#beranda" class="navbar__brand">Widhi<span>.</span></a>
+
+      <nav class="navbar__nav" id="navMenu">
+        <a href="#beranda" class="nav-link active">Home</a>
+        <a href="#tentang" class="nav-link">About</a>
+        <a href="#keahlian" class="nav-link">Skills</a>
+        <a href="#proyek" class="nav-link">Projects</a>
+        <a href="#kontak" class="nav-link">Contact</a>
+      </nav>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- home -->
+  <section class="hero" id="beranda">
+    <div class="hero__inner">
+      <div class="hero__text">
+        <p class="hero__eyebrow">Class XI RPL · Front-End Developer</p>
+        <h1 class="hero__title">Hallo, I'm <br><span>Ahmad Widhi Praditya.</span></h1>
+        <p class="hero__desc">
+            Software Engineering student who enjoys building web interfaces 
+            neat and easy to use. I learned to string together code all at once 
+            designing the appearance, from a simple sketch to a complete site 
+            walking.
+        </p>
+        <div class="hero__actions">
+          <a href="#proyek" class="btn btn--primary">View Projects</a>
+          <a href="#kontak" class="btn btn--ghost">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hero__photo">
+        <img src="assets/images/widhi-removebg-preview.png" alt="Foto Widhi" class="hero__img">
+      </div>
+    </div>
+  </section>
+
+  <!-- about -->
+  <section class="about" id="tentang">
+    <div class="section-inner">
+      <p class="section-eyebrow">About Me</p>
+      <div class="about__grid">
+        <div class="about__card">
+          <h2 style="margin-bottom: 10px;">Get to know me better</h2>
+          <p>
+            I am Widhi, an interested class XI student in Software Engineering 
+            in the world of web development since class X. My interest 
+            Starting from curiosity to see how a web page looks like 
+            can look neat and comfortable to wear.
+          </p>
+          <p>
+            Outside of school hours, I usually work on small projects, 
+            help friends create simple pages, occasionally follow along 
+            national level CTF competition, and national level web built. I believe in the learning process 
+            The most effective way is to build something straight away. 
+          </p>
+          <ul class="about__facts">
+            <li><strong>School:</strong> SMK Negeri 40 Jakarta - Kelas XI RPL</li>
+            <li><strong>Focus:</strong> Front-End Development &amp; Cyber Security</li>
+            <li><strong>Location:</strong> Jakarta, Indonesia</li>
+          </ul>
+        </div>
+        <div class="about__stats">
+          <div class="stat-card">
+            <span class="stat-card__num">4</span>
+            <span class="stat-card__label">Projects Completed</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num">6</span>
+            <span class="stat-card__label">Technologies Learned</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num">1</span>
+            <span class="stat-card__label">Year of Coding Experience</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- skills -->
+  <section class="skills" id="keahlian">
+    <div class="section-inner">
+      <p class="section-eyebrow">Skills</p>
+      <h2 class="section-title">Things I'm good at</h2>
+
+      <div class="skills__grid">
+        <div class="skill-card">
+          <div class="skill-card__icon"><img src="assets/icons/html.png"></div>
+          <h3>HTML &amp; CSS</h3>
+          <p>Create page structure and responsive displays from scratch.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon"><img src="assets/icons/js.png"></div>
+          <h3>JavaScript</h3>
+          <p>Add simple interactions like form validation and animations.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon"><img src="assets/icons/mysql.png"></div>
+          <h3>PHP &amp; MySQL</h3>
+          <p>Create simple systems with a database for school needs.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon"><img src="assets/icons/nodejs.png"></div>
+          <h3>Node JS</h3>
+          <p>Develop efficient RESTful APIs and scalable backend architectures.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon"><img src="assets/icons/git.png"></div>
+          <h3>Git &amp; GitHub</h3>
+          <p>Manage source code versions and track project history.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card__icon"><img src="assets/icons/ctf.png"></div>
+          <h3>Capture The Flag</h3>
+          <p>Solve cybersecurity challenges and analyze system vulnerabilities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- project -->
+  <section class="projects" id="proyek">
+    <div class="section-inner">
+      <p class="section-eyebrow">Portfolio</p>
+      <h2 class="section-title">Some Projects I've Built</h2>
+
+      <div class="projects__grid">
+
+        <article class="project-card">
+          <div class="project-card__thumb thumb--one">
+            <img src="assets/images/mbg.png" alt="MBG Data Collection">
+          </div>
+          <div class="project-card__body">
+            <h3>MBG Data Collection</h3>
+            <p>
+              Develop a structured and efficient data collection system for the MBG program.
+            </p>
+            <div class="project-card__tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__thumb thumb--two">
+            <img src="assets/images/lomba-wcc.png" alt="Toko Batik — Landing Page">
+          </div>
+          <div class="project-card__body">
+            <h3>Toko Batik - Landing Page</h3>
+            <p>
+              Design an attractive and responsive landing page to showcase local batik collections.
+            </p>
+            <div class="project-card__tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__thumb thumb--three">
+            <img src="assets/images/ppt-store.png" alt="PPT Store">
+          </div>
+          <div class="project-card__body">
+            <h3>PPT Store</h3>
+            <p>
+              Develop a user-friendly platform for browsing and downloading presentation templates.
+            </p>
+            <div class="project-card__tags">
+              <span>Node JS</span><span>Laravel</span><span>MySQL</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__thumb thumb--three">
+            <img src="assets/images/kos-manager.png" alt="Kos Manager">
+          </div>
+          <div class="project-card__body">
+            <h3>Kos Manager</h3>
+            <p>
+              Build an efficient dashboard for managing boarding house operations and administration.
+            </p>
+            <div class="project-card__tags">
+              <span>Laravel</span><span>MySQL</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <section class="contact" id="kontak">
+    <div class="section-inner contact__inner">
+      <div class="contact__info">
+        <p class="section-eyebrow">Contact</p>
+        <h2 class="section-title">Let's Connect</h2>
+        <p>
+          Open for school project collaborations, internships, or just to
+          share stories about learning web development. Please send a message
+          through the form on the side or via the contact information below.
+        </p>
+        <ul class="contact__list">
+          <li>widhipraditya@gmail.com</li>
+          <li>+62 858-1063-2983</li>
+          <li>Jakarta, Indonesia</li>
+        </ul>
+      </div>
+
+      <form class="contact__form" id="contactForm">
+        <label for="nama">Name</label>
+        <input type="text" id="nama" name="nama" placeholder="Nama kamu" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+
+        <label for="pesan">Message</label>
+        <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesan di sini..." required></textarea>
+
+        <button type="submit" class="btn btn--primary btn--block">Send Message</button>
+        <p class="contact__note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>© 2026 Ahmad Widhi Praditya.</p>
+      <div class="footer__socials">
+        <a href="https://github.com/widhi578" target="_blank" aria-label="GitHub">GitHub</a>
+        <a href="https://www.instagram.com/marcwidhi12/" target="_blank" aria-label="Instagram">Instagram</a>
+        <!-- <a href="#" aria-label="LinkedIn">LinkedIn</a> -->
+      </div>
+      <button class="footer__top" id="toTop" aria-label="Kembali ke atas">↑</button>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle menu navigasi pada tampilan mobile
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('is-open');
+      navToggle.classList.toggle('is-active');
+    });
+
+    // Menutup menu saat salah satu link diklik (mobile)
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('is-open');
+        navToggle.classList.remove('is-active');
+      });
+    });
+
+    // Highlight link navigasi aktif sesuai section yang terlihat
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+          });
+        }
+      });
+    }, { rootMargin: '-45% 0px -45% 0px' });
+
+    sections.forEach(section => observer.observe(section));
+
+    // Navbar mendapat bayangan halus saat halaman discroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('is-scrolled', window.scrollY > 12);
+    });
+
+    // Tombol kembali ke atas
+    document.getElementById('toTop').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Validasi & feedback form kontak (tampilan saja, tanpa backend)
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const note = document.getElementById('formNote');
+      note.textContent = 'Terima kasih! Pesan kamu (contoh) berhasil dikirim.';
+      note.classList.add('is-visible');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
