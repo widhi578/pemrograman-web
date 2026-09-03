@@ -106,7 +106,7 @@ h1, h2, h3 {
   border-bottom: 1px solid gainsboro; /* Named color + border pada elemen #1 */
   transition: box-shadow 0.25s ease;
 }
-
+                            
 #navbar.is-scrolled {
   box-shadow: 0 6px 18px rgba(51, 48, 44, 0.06);
 }
