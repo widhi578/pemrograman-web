@@ -1,4 +1,4 @@
-# Laporan Singkat — Web Portofolio (index.html & style.css)
+# Laporan Singkat Web Portofolio (index.html & style.css)
 
 ## 1. Selector yang Dipakai & Lokasinya
 | Jenis Selector | Contoh | Lokasi di style.css |
