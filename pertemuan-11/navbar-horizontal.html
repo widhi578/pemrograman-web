@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            display: block;
+            width: 140px;
+            height: 62px;
+            object-fit: contain;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 34px;
+            padding: 0 48px;
+        }
+
+        .nav-list a {
+            color: white;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 24px;
+        }
+
+        .nav-list a:hover {
+            color: #4A90E2;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./assets/logo-widzz-removebg-preview.png" alt="Logo Widzz" width="100">
+        </div>
+        <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

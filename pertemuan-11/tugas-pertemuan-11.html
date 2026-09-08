@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #f8f9ff, #eef2ff);
+        min-height: 100vh;
+        color: #252735;
+    }
+
+    /* navbar */
+    .navbar {
+        width: 92%;
+        max-width: 1200px;
+        margin: 25px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 20px;
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 18px;
+        box-shadow: 0 10px 35px rgba(80, 90, 130, 0.10);
+        position: relative;
+        z-index: 1000;
+        transition: 0.3s ease;
+    }
+
+    .navbar:hover {
+        box-shadow: 0 15px 40px rgba(80, 90, 130, 0.15);
+    }
+
+    /* logo */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #252735;
+        font-size: 21px;
+        font-weight: bold;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #9b8cff, #7c6bea);
+        color: white;
+        border-radius: 12px;
+        font-size: 18px;
+        box-shadow: 0 6px 15px rgba(124, 107, 234, 0.25);
+    }
+
+    /* menu */
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        list-style: none;
+    }
+
+    .nav-menu > li {
+        position: relative;
+    }
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 11px 15px;
+        text-decoration: none;
+        color: #5f6272;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+        background: #f0efff;
+        color: #7162df;
+        transform: translateY(-1px);
+    }
+
+    /* dropdown */
+    .dropdown-icon {
+        font-size: 11px;
+        transition: transform 0.3s ease;
+    }
+
+    .dropdown:hover .dropdown-icon {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        min-width: 190px;
+        padding: 8px;
+        list-style: none;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(15px);
+        border: 1px solid #eeeeff;
+        border-radius: 15px;
+        box-shadow: 0 15px 35px rgba(70, 75, 110, 0.13);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: all 0.25s ease;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .dropdown-menu li a {
+        display: block;
+        padding: 11px 13px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #656878;
+        font-size: 14px;
+        transition: all 0.25s ease;
+    }
+
+    .dropdown-menu li a:hover {
+        background: #f3f1ff;
+        color: #7162df;
+        padding-left: 17px;
+    }
+
+    /* active */
+    .nav-link.active {
+        background: #7162df;
+        color: white;
+        box-shadow: 0 6px 15px rgba(113, 98, 223, 0.20);
+    }
+
+    .nav-link.active:hover {
+        background: #6657d3;
+        color: white;
+    }
+
+    /* mobile */
+    .menu-toggle {
+        display: none;
+        border: none;
+        background: #f0efff;
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 20px;
+        color: #7162df;
+    }
+
+    /* responsive */
+    @media (max-width: 768px) {
+
+        .navbar {
+            width: 94%;
+        }
+
+        .menu-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            right: 0;
+            padding: 10px;
+            display: none;
+            flex-direction: column;
+            align-items: stretch;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(70, 75, 110, 0.13);
+        }
+
+        .nav-menu.show {
+            display: flex;
+        }
+
+        .nav-link {
+            width: 100%;
+        }
+
+        .dropdown-menu {
+            position: static;
+            display: none;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            box-shadow: none;
+            margin-top: 5px;
+            background: #f8f7ff;
+        }
+
+        .dropdown.open .dropdown-menu {
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: 34px;
+        }
+    }
+
+    .gallery-section {
+        width: 92%;
+        max-width: 1200px;
+
+        margin: 120px auto 80px;
+    }
+
+    /* Judul section */
+    .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .section-title span {
+        display: inline-block;
+        padding: 7px 14px;
+        background: #eeecff;
+        color: #7162df;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+        margin-bottom: 10px;
+        color: #252735;
+    }
+
+    .section-title p {
+        color: #7a7d8c;
+        font-size: 15px;
+    }
+
+    /* Gallery */
+    .gallery {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 22px;
+    }
+
+
+    /* Card */
+    .gallery-card {
+        width: 300px;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        box-shadow: 0 10px 30px rgba(70, 75, 110, 0.08);
+        transition: all 0.3s ease;
+    }
+
+
+    /* Efek hover */
+    .gallery-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 35px rgba(70, 75, 110, 0.15);
+    }
+
+    /* Image */
+    .gallery-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+    }
+
+    .gallery-card:hover img {
+        transform: scale(1.05);
+    }
+
+    /* Caption */
+    .caption {
+        padding: 17px 18px 20px;
+    }
+    .caption h3 {
+
+        font-size: 17px;
+
+        color: #303241;
+
+        margin-bottom: 7px;
+    }
+    .caption p {
+
+        color: #808290;
+
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+
+        .gallery-section {
+            margin-top: 90px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+        }
+
+        .gallery-card {
+            width: 100%;
+            max-width: 340px;
+        }
+
+    }
+
+
+</style>
+
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img src="./assets/logo-widzz-removebg-preview.png" alt="Logo Widzz" width="100">
+        </a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#" class="nav-link active">Home</a></li>
+            <li><a href="#" class="nav-link">About</a></li>
+
+            <li class="dropdown">
+                <a href="#" class="nav-link dropdown-button">Services<span class="dropdown-icon">⌄</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">UI/UX Design</a></li>
+                    <li><a href="#">Digital Marketing</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="nav-link">Portfolio</a></li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+    </nav>
+
+    <section class="gallery-section">
+        <div class="section-title">
+            <span>Gallery</span>
+            <h2>Our Image Gallery</h2>
+            <p>
+                A collection of images with a simple, soft, and modern look.
+            </p>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery-card">
+                <img src="https://picsum.photos/id/1015/300/200" alt="Mountain">
+                <div class="caption">
+                    <h3>Mountain View</h3>
+                    <p>A beautiful mountain view.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://picsum.photos/id/1016/300/200" alt="Forest">
+                <div class="caption">
+                    <h3>Green Forest</h3>
+                    <p>A peaceful and green forest atmosphere.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://picsum.photos/id/1025/300/200" alt="Dog">
+                <div class="caption">
+                    <h3>Lovely Dog</h3>
+                    <p>A cute dog with a charming expression.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://picsum.photos/id/1035/300/200" alt="Beach">
+                <div class="caption">
+                    <h3>Beautiful Beach</h3>
+                    <p>A beautiful beach with a relaxing atmosphere.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://picsum.photos/id/1043/300/200" alt="Nature">
+                <div class="caption">
+                    <h3>Nature</h3>
+                    <p>A beautiful natural scenery that refreshes the eyes.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="https://picsum.photos/id/106/300/200" alt="Water">
+                <div class="caption">
+                    <h3>Calm Water</h3>
+                    <p>A calm water surface with a natural landscape.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        menuToggle.addEventListener("click", function () {
+
+            navMenu.classList.toggle("show");
+
+        });
+
+
+        // dropdown untuk mobile
+        const dropdownButton = document.querySelector(".dropdown-button");
+        const dropdown = document.querySelector(".dropdown");
+
+        dropdownButton.addEventListener("click", function (event) {
+
+            if (window.innerWidth <= 768) {
+
+                event.preventDefault();
+
+                dropdown.classList.toggle("open");
+
+            }
+
+        });
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
