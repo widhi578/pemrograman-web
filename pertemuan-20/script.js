@@ -2,7 +2,7 @@
 console.log("--- PRAKTIK 1 ---");
 
 // 1. Buat array hobi berisi 4 hobi
-let hobi = ["Membaca", "Bermain Gitar", "Ngoding", "CTF"];
+let hobi = ["Membaca", "Bermain Gitar", "Ngoding", "gaming"];
 
 // Tampilkan seluruh array, hobi pertama, dan hobi terakhir
 console.log("Seluruh hobi:", hobi);
@@ -15,6 +15,13 @@ console.log("Jumlah hobi:", hobi.length);
 // 3. Tampilkan hobi[10]
 console.log("Hobi ke-10:", hobi[10]); 
 
+
+// PRAKTIK 3: Array of Object
+console.log("\n--- PRAKTIK 3 ---");
+console.log(hobi.includes("gaming")); //False
+console.log(hobi.includes("Membaca")); //True
+console.log(hobi.indexOf("gaming")); //2
+console.log(hobi.join(" | ")); //0
 
 // PRAKTIK 2: Manipulasi Array
 console.log("\n--- PRAKTIK 2 ---");
